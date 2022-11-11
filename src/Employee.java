@@ -7,6 +7,17 @@ public class Employee {
     private int age;
     private String address;
 
+    public Employee(){
+
+    }
+    //Constructors...
+    public Employee(int id, String name, int age, String address){
+        setId(id);
+        setName(name);
+        setAge(age);
+        setAddress(address);
+    }
+
     //setter and getter methods...
     public void setId(int id){
         this.id = id;
