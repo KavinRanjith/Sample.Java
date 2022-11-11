@@ -1,5 +1,7 @@
+import java.util.Date;
+
 //Create a class with property placeholders, there is no logic we wrote here...
-public class Employee {
+public class Employee extends AuditClass {
 
     //add Attributes with objects
     private int id;
@@ -7,15 +9,25 @@ public class Employee {
     private int age;
     private String address;
 
+
     public Employee(){
 
     }
     //Constructors...
-    public Employee(int id, String name, int age, String address){
+    public Employee(int id, String name, int age, String address, String createdBy, Date createdDate){
         setId(id);
         setName(name);
         setAge(age);
         setAddress(address);
+        setCreatedBy(createdBy);
+        setCreatedDate(createdDate);
+    }
+
+    //overriding....
+
+    @Override
+    public String getData() {
+        return "This is Child Class";
     }
 
     //setter and getter methods...
@@ -49,6 +61,10 @@ public class Employee {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
     }
 
     //override toString to printing the data...
