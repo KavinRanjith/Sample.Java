@@ -1,36 +1,21 @@
-//Increment and Decrement
+public class Main {
+    public static void main(String[] args) {
 
-//Increment and Decrement Operator
-public class Main
-{
-    public static void main(String[] args)
-    {
-        postIncrement();
-        preIncrement();
-        postDecrement();
-        preDecrement();
-    }
-    // Post Increment Operator
-    public static void postIncrement(){
-        int i = 0;
-        System.out.println(i++);
-    }
+    //preparing object for Inserting the record to DB
+    Employee employee = new Employee();
+    employee.setId(101);
+    employee.setName("Mariam");
+    employee.setAge(22);
+    employee.setAddress("heart");
+        //print output
+        System.out.println(employee);
+        System.out.println(employee.getId());
+        System.out.println(employee.getName());
+        System.out.println(employee.getAge());
+        System.out.println(employee.getAddress());
 
-    // Pre Increment Operator
-    public static void preIncrement(){
-        int i = 0;
-        System.out.println(++i);
-    }
-
-    //Post decrement Operator
-    public static void  postDecrement(){
-        int i = 0;
-        System.out.println(i--);
-    }
-
-    //Pre decrement Operator
-    public static void preDecrement() {
-        int i = 0;
-        System.out.println(--i);
+        //Updating the Address Data...
+        employee.setAddress("powerfulplace");
+        System.out.println(employee);
     }
 }
