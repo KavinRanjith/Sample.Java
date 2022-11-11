@@ -28,11 +28,18 @@ public class Main {
         employee.setAddress("powerfulplace");
         System.out.println(employee);
 
-        //using constructor...
+        //using constructor from Employee.java...
         //Shorted way of inserting datas to DB...
         Employee employee2 = new Employee(102,"Amul",100,"USA","admin", new Date());
         System.out.println(employee2);
         employee2.setAddress("ASU");
         System.out.println(employee2);
+
+        //Using next Constructor...
+        Employee employee3 = new Employee(103,"Sun",100000, "Universe","Lord", new Date());
+        System.out.println(employee3);
+        //update age data....
+        employee3.setAge(1000000000);
+        System.out.println(employee3);
     }
 }
