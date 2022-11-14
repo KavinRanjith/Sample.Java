@@ -1,45 +1,31 @@
-import java.util.Date;
+class StaticComponents
+{
 
-public class Main {
-    public static void main(String[] args) {
+  static int staticVariable;
+    static
+    {
+        System.out.println("StaticComponents SIB");
+        staticVariable = 10;
+    }
 
-        //preparing object for Inserting the record to DB
-        Employee employee = new Employee();
-        employee.setId(101);
-        employee.setName("Mariam");
-        employee.setAge(22);
-        employee.setAddress("heart");
-        employee.setCreatedBy("Admin");
-        employee.setCreatedDate(new Date());
+    static void staticMethod()
+    {
+        System.out.println("From StaticMethod");
+        System.out.println(staticVariable);
+    }
+}
 
-        System.out.println(employee.getData());
-        //print output
-        System.out.println(employee); //setter...
-        System.out.println(employee.getId());
-        System.out.println(employee.getName());
-        System.out.println(employee.getAge());
-        System.out.println(employee.getAddress());
+public class Main
+{
+    static
+    {
+        System.out.println("MainClass SIB");
+    }
 
-        System.out.println(employee.getData());
-
-        System.out.println(employee);
-
-        //Updating the Address Data...
-        employee.setAddress("powerfulplace");
-        System.out.println(employee);
-
-        //using constructor from Employee.java...
-        //Shorted way of inserting datas to DB...
-        Employee employee2 = new Employee(102,"Amul",100,"USA","admin", new Date());
-        System.out.println(employee2);
-        employee2.setAddress("ASU");
-        System.out.println(employee2);
-
-        //Using next Constructor...
-        Employee employee3 = new Employee(103,"Sun",100000, "Universe","Lord", new Date());
-        System.out.println(employee3);
-        //update age data....
-        employee3.setAge(1000000000);
-        System.out.println(employee3);
+    public static void main(String[] args)
+    {
+        //Static Members directly accessed with Class Name
+        StaticComponents.staticVariable = 20;
+        StaticComponents.staticMethod();
     }
 }
