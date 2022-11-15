@@ -1,31 +1,10 @@
-class StaticComponents
-{
-
-  static int staticVariable;
-    static
-    {
-        System.out.println("StaticComponents SIB");
-        staticVariable = 10;
-    }
-
-    static void staticMethod()
-    {
-        System.out.println("From StaticMethod");
-        System.out.println(staticVariable);
-    }
-}
-
-public class Main
-{
-    static
-    {
-        System.out.println("MainClass SIB");
-    }
-
-    public static void main(String[] args)
-    {
-        //Static Members directly accessed with Class Name
-        StaticComponents.staticVariable = 20;
-        StaticComponents.staticMethod();
+public class Main {
+    public static void main(String[] args) {
+        Device device = new mobileDevice();
+        Device device1 = new LaptopDevice();
+        System.out.println(device.getDevice());
+        System.out.println(device1.getDevice());
+        device.deviceCalled();
+        device1.deviceCalled();
     }
 }
