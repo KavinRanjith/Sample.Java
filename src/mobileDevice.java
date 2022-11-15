@@ -1,4 +1,6 @@
-public class mobileDevice extends Device {
+//hide implementation function using abstract concept
+//child class(Inheritance)
+public class mobileDevice implements IDevice {
     @Override
     public String getDevice() {
         return "This is Samsung Mobile";
@@ -6,6 +8,7 @@ public class mobileDevice extends Device {
 
     @Override
     public void deviceCalled() {
-        execute();
+//        execute();
+        System.out.println("Mobile Interface");
     }
 }

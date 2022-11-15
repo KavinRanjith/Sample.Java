@@ -1,4 +1,5 @@
-public abstract class Device {
+//oops- abstraction concept
+public abstract class Device {  //parent class(Inheritance)
 
     public abstract String getDevice();
 

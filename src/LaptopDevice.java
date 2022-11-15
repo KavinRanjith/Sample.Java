@@ -1,4 +1,6 @@
-public class LaptopDevice extends Device{
+//hide implementation function using abstract concept
+//child class(Inheritance)
+public class LaptopDevice implements IDevice{
     @Override
     public String getDevice() {
         return "This is Dell Laptop";
@@ -6,7 +8,6 @@ public class LaptopDevice extends Device{
 
     @Override
     public void deviceCalled() {
-        execute();
-
+        System.out.println("Lap Interface");
     }
 }
