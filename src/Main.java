@@ -1,60 +1,47 @@
-//Example 1
-interface P
+//Example1 starts...
+class Jeffrey
 {
-    String p = "pppp";
-    String methodP();
+    String Employee = "Raja from (Exp also jef) SWT";
 }
 
-interface Q extends P
+class SWT extends Jeffrey
 {
-    String q = "QQQQ";
-    String methodQ();
+    String Employee = "Mani,gokul,pavan from SWT";
+//    String Employee = "Raja Also jeffry and SWT";
 }
+//Example 1 ends...
 
-class R implements P, Q
-{
-    public String methodP()
+//Example2 starts...
+class A{
     {
-        return p+q;
-    }
-    public String methodQ()
-    {
-        return q+p;
+        System.out.println(1);
     }
 }
+class B extends A
+{
+    {
+        System.out.println(2);
+    }
+}
+class C extends B
+{
+    {
+        System.out.println(3);
+    }
+}
+//Exaple2 ends...
 
-//Example 2
-class A implements B
+public class Main
 {
-    public int methodB(int i)
-    {
-        return i =+ i*i;
-    }
-}
-interface B
-{
-    int methodB(int i);
-}
-
-//Example 3:How do you access interface field ‘i’ in the below code?
-class X
-{
-    interface Y
-    {
-        int i = 111;
-    }
-}
-public class Main {
     public static void main(String[] args)
     {
-     R r = new R();  //Example 1
-        System.out.println(r.methodP());
-        System.out.println(r.methodQ());
+        Jeffrey a = new SWT();   //Example1 starts...
 
-     B b = new A();  //Example 2
-        System.out.println(b.methodB(2));
+        System.out.println(a.Employee);
 
-        System.out.println(X.Y.i);  //Example 3
+        SWT a1 = new SWT();
+        System.out.println(a1.Employee); //Example 1 ends...
+
+        C c = new C(); //Example 2 o/p...
     }
-
 }
