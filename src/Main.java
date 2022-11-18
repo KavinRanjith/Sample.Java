@@ -1,70 +1,27 @@
-//Example1 starts...
-class Jeffrey
-{
-    String Employee = "Raja from (Exp also jef) SWT";
-}
-
-class SWT extends Jeffrey
-{
-    String Employee = "Mani,gokul,pavan from SWT";
-//    String Employee = "Raja Also jeffry and SWT";
-}
-//Example 1 ends...
-
-//Example2 starts...
-class A{
-    {
-        System.out.println(1);
-    }
-}
-class B extends A
-{
-    {
-        System.out.println(2);
-    }
-}
-class C extends B
-{
-    {
-        System.out.println(3);
-    }
-}
-//Exaple2 ends...
-
-//Example 3
-class X
-{
-    String s = "Class X";
-}
-class  Y extends X
-{
-    String s = "Class Y";
-    {
-        System.out.println(super.s);
-    }
-}
-class Z extends Y
-{
- String s = "Class Z";
-    {
-        System.out.println(super.s);
-    }
-}
-
 public class Main
 {
     public static void main(String[] args)
     {
-        Jeffrey a = new SWT();   //Example1 starts...
+        String name = "JavaConceptOfTheDay".substring(4);   //cut the prefix value
+        String name1 = "Gokul".repeat(10); //count increment
+        String name3 = "food".replace('o', 'a');  //replace the string
+        String str = "   Java\tConcept\tOf\tThe\tDay    ".strip(); //just like trim()
+        String str1 = "Java";
+        String str2 = str1.intern();
+        String str3 = new String("java");
+        String str4 = new String("1");
+        String str5 = new String("22");
+        String str6 = new String("333");
 
-        System.out.println(a.Employee);
+        System.out.println(name);
+        System.out.println(name1);
+        System.out.println("1".concat("2").concat("3").repeat(3).charAt(8)); //concat and locate
+        System.out.println(name3.substring(1,3));  //cut f and d from food
+        System.out.println(str);
+        System.out.println(str1 == str2);
+        System.out.println(str2 == str3);
+        System.out.println(str3 == str1);
+        System.out.println(str4.concat(str5).concat(str6).repeat(3));
 
-        SWT a1 = new SWT();
-        System.out.println(a1.Employee); //Example 1 ends...
-
-        C c = new C(); //Example 2
-
-        Z z = new Z(); //example3
-        System.out.println(z.s); //without using super key in  class initialization  it getting same o/p...
     }
 }
